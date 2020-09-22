@@ -13,14 +13,16 @@
     data() {
       return {
         display: false,
-        text: "init"
+        text: "init",
+        player: ""
       }
     },
     methods: {
       playerClick (){
         if(this.text == "init") {
           this.text = this.step
-          this.$emit('stepAdd')
+          this.player = this.text%2
+          this.$emit('stepAdd',this.player)
         }
         
         if(this.display == false) this.display = !this.display
