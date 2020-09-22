@@ -1,23 +1,31 @@
 <template>
   <div class="cell" v-on:click="playerClick">
-    <div class="black" v-if="player%2 == 0"></div>
-    <div class="white" v-if="player%2 == 1"></div>
+    <div v-if="display">
+          <div class="black" v-if="text%2 == 0"></div>
+          <div class="white" v-if="text%2 == 1"></div>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
+    props: ['step'],
     data() {
       return {
-        player: 0
+        display: false,
+        text: "init"
       }
     },
     methods: {
       playerClick (){
-        this.player++
-        console.log(this.player)
+        if(this.text == "init") {
+          this.text = this.step
+          this.$emit('stepAdd')
+        }
+        
+        if(this.display == false) this.display = !this.display
       }
-    }
+    },
   }
 
 </script>

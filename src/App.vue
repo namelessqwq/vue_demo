@@ -1,36 +1,37 @@
 <template>
   <div class="container">
+    <h1>{{step}}</h1>
     <div class="row">
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
     </div>
-        <div class="row">
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
+    <div class="row">
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
     </div>    <div class="row">
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
     </div>    <div class="row">
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
     </div>    <div class="row">
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
+      <Cell v-on:stepAdd="stepAdd" v-bind:step="step" />
     </div>
   </div>
   
@@ -42,6 +43,17 @@ import Cell from "./components/cell"
 export default {
   components: {
     Cell
+  },
+  data() {
+    return {
+      step:0,
+      map: []
+    }
+  },
+  methods: {
+    stepAdd() {
+      this.step++
+    }
   }
 }
 
