@@ -1,28 +1,62 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div class="row">
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+    </div>
+        <div class="row">
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+    </div>    <div class="row">
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+    </div>    <div class="row">
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+    </div>    <div class="row">
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+      <Cell />
+    </div>
   </div>
+  
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Cell from "./components/cell"
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    Cell
   }
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .row {
+    display: flex;
+  }
 </style>
